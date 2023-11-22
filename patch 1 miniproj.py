@@ -76,9 +76,10 @@ while lose is False and win is False:
     freecoord = findemptycoord(plocation).copy() #print a list that contain empty location
     print("You can only go to coordinates", freecoord)
     coordinput = int(input("Please select a coordinate to go to ")) #selected police go to that coordinate
-    while coordinput not in freecoord == True: #prevent move to exist location
-        print("Invalid coordinate! You can only go to coordinates ", freecoord)     
-        coordinput = int(input("Please select a coordinate to go to "))
+    while coordinput not in freecoord:
+        if coordinput not in freecoord: #prevent move to exist location
+          print("Invalid coordinate! You can only go to coordinates ", freecoord)     
+          coordinput = int(input("Please select a coordinate to go to "))
     map[plocation][1]= 0 # update map: original location to empty
     map[coordinput][1] = polinput # update map : new location to police
     losecond(findemptycoord(rlocation)) # check if the Thief lose
