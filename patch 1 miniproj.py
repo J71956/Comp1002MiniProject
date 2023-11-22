@@ -93,9 +93,10 @@ while lose is False and win is False:
 
     print("You can only go to coordinates", freecoord)
     coordinput = int(input("Please select a coordinate to go to"))
-    while coordinput not in freecoord == True:
-        print("Invalid coordinate! You can only go to coordinates ", freecoord)     
-        coordinput = int(input("Please select a coordinate to go to"))
+    while coordinput not in freecoord:
+        if coordinput not in freecoord:
+            print("Invalid coordinate! You can only go to coordinates ", freecoord)     
+            coordinput = int(input("Please select a coordinate to go to "))
     map[rlocation][1]= 0
     map[coordinput][1] = 'T'
     rlocation =coordinput
