@@ -22,7 +22,6 @@ def findemptycoord(curloc):
      connectedcoord = map[curloc][0].copy()
      print(connectedcoord)
      for i in range(len(connectedcoord)-1):
-        print(i)
         if map[connectedcoord[i-1]][1]!= 0:
             connectedcoord.pop(i-1)
      return connectedcoord
