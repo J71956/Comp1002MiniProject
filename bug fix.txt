@@ -8,3 +8,18 @@ while coordinput not in freecoord:
         if coordinput not in freecoord:
             print("Invalid coordinate! You can only go to coordinates ", freecoord)     
             coordinput = int(input("Please select a coordinate to go to "))
+
+Wrong 2
+win = False
+def wincond(rlocation):   
+    if rlocation == 8 or rlocation == 9 or rlocation == 10:
+        win = True
+
+True 2
+win = wincond()
+def wincond():
+    if rlocation == 8 or rlocation == 9 or rlocation == 10:
+        print("The Robber Escaped! The Robber Wins!")
+        return True
+    else:
+        return False
