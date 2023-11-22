@@ -23,3 +23,42 @@ def wincond():
     else:
         return False
 win = wincond()
+
+Wrong 3
+#list index out of range
+def findemptycoord(curloc):
+     connectedcoord = map[curloc][0].copy()
+     for i in range(len(connectedcoord)-1):
+        if map[connectedcoord[i-1]][1]!= 0:
+            connectedcoord.pop(i-1)
+     return connectedcoord
+
+True 3
+def findemptycoord(curloc):
+     connectedcoord = map[curloc][0].copy()
+     emptycoord=connectedcoord.copy()
+     for i in range(len(connectedcoord)):
+        if map[connectedcoord[i]][1]!= 0:
+            X=connectedcoord[i]
+            for j in range(len(emptycoord)):
+                if emptycoord[j]==X:
+                    emptycoord.pop(j)
+                    break
+     return emptycoord
+Wrong 4
+#The game will not stop
+def losecond(freecoord):
+    if len(freecoord) == 0:
+        lose = True
+losecond(findemptycoord(rlocation))
+
+True 4
+def losecond():
+    if len(findemptycoord(rlocation)) == 0:
+        print("The Robber is trapped! The Police Win!")
+        return True
+    else:
+        return False
+lose=losecond()
+if lose==True:
+        break
