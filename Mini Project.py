@@ -19,7 +19,7 @@ def corresponding_key(val, dictionary):
             return k
 #find empty coord
 def findemptycoord(curloc):
-     connectedcoord = map[curloc][0].copy()
+     connectedcoord = map[curloc][0].copy() #bug 1
      for i in range(len(connectedcoord)):
           if map[connectedcoord[i]][1]!= 0:
                connectedcoord.pop(i)
@@ -63,7 +63,7 @@ printmapcond()
 while lose is False and win is False:
     #Police Turn
     print("Its the Police's Turn!")
-    polinput = str(input('Please select a policeman '))
+    polinput = str(input('Please select a policeman ')).capitalize
     while polinput not in police== True:
           polinput = str(input('Invalid policeman! Please select policeman A, B, or C'))
     location = int(corresponding_key(polinput,map))
