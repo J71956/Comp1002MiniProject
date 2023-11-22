@@ -68,7 +68,7 @@ while lose is False and win is False:
     printmapcond()
     #Police Turn
     print("Its the Police's Turn!")
-    polinput = str(input('Please select a policeman '))
+    polinput = str(input('Please select a policeman ')).capitalize()
     while polinput not in police== True:
           polinput = str(input('Invalid policeman! Please select policeman A, B, or C'))
     plocation = int(corresponding_key(polinput,map))
