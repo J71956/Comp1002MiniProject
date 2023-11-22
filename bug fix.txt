@@ -16,10 +16,10 @@ def wincond(rlocation):
         win = True
 
 True 2
-win = wincond()
 def wincond():
     if rlocation == 8 or rlocation == 9 or rlocation == 10:
         print("The Robber Escaped! The Robber Wins!")
         return True
     else:
         return False
+win = wincond()
