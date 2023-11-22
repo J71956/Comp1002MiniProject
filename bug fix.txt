@@ -1,9 +1,9 @@
-wrong code 1
+Wrong 1
 while coordinput not in freecoord == True: #prevent move to exist location
         print("Invalid coordinate! You can only go to coordinates ", freecoord)     
         coordinput = int(input("Please select a coordinate to go to "))
 
-True code 1
+True 1
 while coordinput not in freecoord:
         if coordinput not in freecoord:
             print("Invalid coordinate! You can only go to coordinates ", freecoord)     
