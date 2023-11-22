@@ -73,7 +73,7 @@ while lose is False and win is False:
           polinput = str(input('Invalid policeman! Please select policeman A, B, or C'))
     plocation = int(corresponding_key(polinput,map))
     print(polinput, ' is in the coordinate', plocation)
-    freecoord = findemptycoord(plocation)
+    freecoord = findemptycoord(plocation).copy()
     print("You can only go to coordinates", freecoord)
     coordinput = int(input("Please select a coordinate to go to"))
     while coordinput not in freecoord == True:
@@ -88,7 +88,7 @@ while lose is False and win is False:
     print("Its the Robber's Turn!")
     rlocation = int(corresponding_key("T",map))
     print('The robber is in the coordinate', rlocation)
-    freecoord = findemptycoord(rlocation)
+    freecoord = findemptycoord(rlocation).copy()
 
     print("You can only go to coordinates", freecoord)
     coordinput = int(input("Please select a coordinate to go to"))
