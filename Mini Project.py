@@ -19,7 +19,7 @@ def corresponding_key(val, dictionary):
             return k
 #find empty coord
 def findemptycoord(curloc):
-     connectedcoord = map[curloc][0]
+     connectedcoord = map[curloc][0].copy()
      for i in range(len(connectedcoord)):
           if map[connectedcoord[i]][1]!= 0:
                connectedcoord.pop(i)
@@ -75,7 +75,7 @@ while lose is False and win is False:
         print("Invalid coordinate! You can only go to coordinates ", freecoord)     
         coordinput = int(input("Please select a coordinate to go to"))
     map[location][1]= 0
-    map[freecoord][1] = polinput
+    map[coordinput][1] = polinput
     losecond()
     #Robber Turn
     print("Its the Robber's Turn!")
@@ -89,7 +89,7 @@ while lose is False and win is False:
         print("Invalid coordinate! You can only go to coordinates ", freecoord)     
         coordinput = int(input("Please select a coordinate to go to"))
     map[location][1]= 0
-    map[freecoord][1] = 'T'
+    map[coordinput][1] = 'T'
     wincond()
 if win == True:
     print("The Robber Escaped! The Robber Wins!")
