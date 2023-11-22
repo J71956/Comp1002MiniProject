@@ -70,10 +70,10 @@ while lose is False and win is False:
     print(polinput, ' is in the coordinate', location)
     freecoord = findemptycoord(location)
     print("You can only go to coordinates", freecoord)
-    coordinput = int(input("Please select a coordinate to go to"))
+    coordinput = int(input("Please select a coordinate to go to "))
     while coordinput not in freecoord == True:
         print("Invalid coordinate! You can only go to coordinates ", freecoord)     
-        coordinput = int(input("Please select a coordinate to go to"))
+        coordinput = int(input("Please select a coordinate to go to "))
     map[location][1]= 0
     map[freecoord][1] = polinput
     losecond()
